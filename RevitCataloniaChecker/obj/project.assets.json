@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Soheil\\Downloads\\Jarvis\\RevitCataloniaChecker\\RevitCataloniaChecker.csproj",
+      "projectUniqueName": "c:\\Users\\Soheil\\Desktop\\ArchIQ_SourceCode\\RevitCataloniaChecker\\RevitCataloniaChecker.csproj",
       "projectName": "RevitCataloniaChecker",
-      "projectPath": "C:\\Users\\Soheil\\Downloads\\Jarvis\\RevitCataloniaChecker\\RevitCataloniaChecker.csproj",
+      "projectPath": "c:\\Users\\Soheil\\Desktop\\ArchIQ_SourceCode\\RevitCataloniaChecker\\RevitCataloniaChecker.csproj",
       "packagesPath": "C:\\Users\\Soheil\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Soheil\\Downloads\\Jarvis\\RevitCataloniaChecker\\obj\\",
+      "outputPath": "c:\\Users\\Soheil\\Desktop\\ArchIQ_SourceCode\\RevitCataloniaChecker\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Soheil\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using Autodesk.Revit.DB;
@@ -124,6 +124,45 @@ namespace RevitCataloniaChecker.Services
             return doorList;
         }
 
+                public static List<BomData> ExtractBom(Document doc)
+        {
+            var dict = new Dictionary<string, BomData>();
+
+            BuiltInCategory[] cats = {
+                BuiltInCategory.OST_Walls, BuiltInCategory.OST_Floors, BuiltInCategory.OST_Roofs,
+                BuiltInCategory.OST_Doors, BuiltInCategory.OST_Windows, BuiltInCategory.OST_Furniture,
+                BuiltInCategory.OST_PlumbingFixtures, BuiltInCategory.OST_LightingFixtures
+            };
+
+            var collector = new FilteredElementCollector(doc)
+                .WhereElementIsNotElementType()
+                .WherePasses(new ElementMulticategoryFilter(cats));
+
+            foreach (Element elem in collector)
+            {
+                string catName = elem.Category?.Name ?? "Unknown";
+                string elemName = elem.Name;
+                if (elem is FamilyInstance fi && fi.Symbol != null)
+                {
+                    elemName = fi.Symbol.FamilyName + " - " + fi.Symbol.Name;
+                }
+
+                string key = $"{catName}||{elemName}";
+                if (!dict.ContainsKey(key))
+                {
+                    dict[key] = new BomData { Category = catName, ElementName = elemName, Count = 0, TotalArea = 0, TotalVolume = 0 };
+                }
+                dict[key].Count++;
+
+                Parameter areaParam = elem.get_Parameter(BuiltInParameter.HOST_AREA_COMPUTED);
+                if (areaParam != null && areaParam.HasValue) dict[key].TotalArea += (areaParam.AsDouble() * SqFtToSqM);
+
+                Parameter volParam = elem.get_Parameter(BuiltInParameter.HOST_VOLUME_COMPUTED);
+                if (volParam != null && volParam.HasValue) dict[key].TotalVolume += (volParam.AsDouble() * 0.028316846592);
+            }
+            return dict.Values.OrderBy(x => x.Category).ThenBy(x => x.ElementName).ToList();
+        }
+
         private static double GetParamValue(FamilyInstance instance, BuiltInParameter bip1, BuiltInParameter bip2)
         {
             // First check instance parameter
@@ -141,3 +180,5 @@ namespace RevitCataloniaChecker.Services
         }
     }
 }
+
+

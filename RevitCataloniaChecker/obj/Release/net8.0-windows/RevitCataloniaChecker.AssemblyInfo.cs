@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RevitCataloniaChecker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a56f2bfe00e9ba14bc7c653e9793a97b8baecf75")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b32a00feb1bbcb11b70f0e6939967ead74ec3809")]
 [assembly: System.Reflection.AssemblyProductAttribute("RevitCataloniaChecker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RevitCataloniaChecker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

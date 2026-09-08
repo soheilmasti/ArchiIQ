@@ -47,7 +47,7 @@ namespace RevitCataloniaChecker.Services
 
         public bool HasApiKey => !string.IsNullOrWhiteSpace(_apiKey);
 
-        public void InitializeProjectContext(string projectName, string country, string province, List<RoomData> rooms, List<ComplianceItem> nonCompliantItems)
+        public void InitializeProjectContext(string projectName, string country, string province, List<RoomData> rooms, List<ComplianceItem> nonCompliantItems, List<BomData> bom)
         {
             _chatHistory.Clear();
 
@@ -70,7 +70,21 @@ namespace RevitCataloniaChecker.Services
                 promptBuilder.AppendLine($"- [{item.ElementType}] {item.ElementIdentifier}: {item.ParameterChecked} measured {item.MeasuredValue} (Req: {item.RequiredValue}) - Rule: {item.RegulationReference}");
             }
 
-            promptBuilder.AppendLine("\n### BEHAVIORAL INSTRUCTIONS:");
+                        promptBuilder.AppendLine("\n### RAG DATA - BILL OF MATERIALS (5D BIM):");
+            if (bom != null && bom.Count > 0)
+            {
+                foreach (var b in bom)
+                {
+                    promptBuilder.AppendLine($"- {b.Category}: {b.ElementName} | Count: {b.Count} | Area: {b.TotalArea:F2} sqm | Vol: {b.TotalVolume:F2} cum");
+                }
+            }
+            
+            promptBuilder.AppendLine("\n### BEHAVIORAL INSTRUCTIONS FOR COST ESTIMATION:");
+            promptBuilder.AppendLine("You are also a 5D BIM Cost Estimator. If the user asks for pricing or provides a CSV price list, use the BOM data to calculate total costs.");
+            promptBuilder.AppendLine("Intelligently deduce the correct currency based on the Region (e.g. Euro for Spain, IRR/Tomans for Iran).");
+            promptBuilder.AppendLine("If no price list is provided, use your knowledge base to estimate current global/regional market prices for the materials listed in the BOM.");
+            
+                        promptBuilder.AppendLine("\n### BEHAVIORAL INSTRUCTIONS:");
             promptBuilder.AppendLine("Act as a professional consultant. Discuss the violations, suggest architectural solutions (e.g., merging rooms, adding windows, lowering requirements based on exceptions), and answer any follow-up questions from the architect in an engaging chat format.");
 
             _systemInstruction = promptBuilder.ToString();
@@ -137,3 +151,6 @@ namespace RevitCataloniaChecker.Services
         }
     }
 }
+
+
+

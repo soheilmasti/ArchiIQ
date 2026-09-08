@@ -27,6 +27,7 @@ namespace RevitCataloniaChecker.Views
 
         private List<RoomData> _rooms = new List<RoomData>();
         private List<DoorData> _doors = new List<DoorData>();
+        private List<BomData> _bom = new List<BomData>();
         private List<ComplianceItem> _allItems = new List<ComplianceItem>();
 
         public ObservableCollection<ChatMessage> ChatMessages { get; set; } = new ObservableCollection<ChatMessage>();
@@ -50,6 +51,7 @@ namespace RevitCataloniaChecker.Views
             {
                 _rooms = RevitDataExtractor.ExtractRooms(_doc);
                 _doors = RevitDataExtractor.ExtractDoors(_doc);
+                _bom = RevitDataExtractor.ExtractBom(_doc);
 
                 string selectedCountry = (CmbCountry.SelectedItem as ComboBoxItem)?.Content.ToString() ?? "Spain";
                 string selectedProvince = (CmbProvince.SelectedItem as ComboBoxItem)?.Content.ToString() ?? "Catalonia";
@@ -156,7 +158,7 @@ namespace RevitCataloniaChecker.Views
             string selectedCountry = (CmbCountry.SelectedItem as ComboBoxItem)?.Content.ToString() ?? "Spain";
             string selectedProvince = (CmbProvince.SelectedItem as ComboBoxItem)?.Content.ToString() ?? "Catalonia";
 
-            _aiService.InitializeProjectContext(_doc.Title, selectedCountry, selectedProvince, _rooms, violations);
+            _aiService.InitializeProjectContext(_doc.Title, selectedCountry, selectedProvince, _rooms, violations, _bom);
 
             ChatMessages.Add(new ChatMessage { Text = "Initiating comprehensive architectural analysis based on local regulations...", IsUser = true });
             ScrollChatToBottom();
@@ -171,6 +173,28 @@ namespace RevitCataloniaChecker.Views
                 ChatMessages.Add(new ChatMessage { Text = $"❌ AI Error: {ex.Message}", IsUser = false });
             }
             ScrollChatToBottom();
+        }
+
+                private void OnUploadCsvClicked(object sender, RoutedEventArgs e)
+        {
+            var dialog = new Microsoft.Win32.OpenFileDialog
+            {
+                Filter = "CSV Files (*.csv)|*.csv|All Files (*.*)|*.*",
+                Title = "Select Price List CSV"
+            };
+
+            if (dialog.ShowDialog() == true)
+            {
+                try
+                {
+                    string csvContent = System.IO.File.ReadAllText(dialog.FileName);
+                    TxtChatInput.Text = $"I have attached a price list CSV. Please estimate costs using these prices:\n\n{csvContent}";
+                }
+                catch (Exception ex)
+                {
+                    System.Windows.MessageBox.Show($"Failed to read CSV: {ex.Message}");
+                }
+            }
         }
 
         private async void OnSendChatClicked(object sender, RoutedEventArgs e)
@@ -270,6 +294,10 @@ namespace RevitCataloniaChecker.Views
         public HorizontalAlignment Alignment => IsUser ? HorizontalAlignment.Right : HorizontalAlignment.Left;
     }
 }
+
+
+
+
 
 
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\Soheil\\Downloads\\Jarvis\\RevitCataloniaChecker\\RevitCataloniaChecker.csproj": {}
+    "c:\\Users\\Soheil\\Desktop\\ArchIQ_SourceCode\\RevitCataloniaChecker\\RevitCataloniaChecker.csproj": {}
   },
   "projects": {
-    "c:\\Users\\Soheil\\Downloads\\Jarvis\\RevitCataloniaChecker\\RevitCataloniaChecker.csproj": {
+    "c:\\Users\\Soheil\\Desktop\\ArchIQ_SourceCode\\RevitCataloniaChecker\\RevitCataloniaChecker.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\Soheil\\Downloads\\Jarvis\\RevitCataloniaChecker\\RevitCataloniaChecker.csproj",
+        "projectUniqueName": "c:\\Users\\Soheil\\Desktop\\ArchIQ_SourceCode\\RevitCataloniaChecker\\RevitCataloniaChecker.csproj",
         "projectName": "RevitCataloniaChecker",
-        "projectPath": "c:\\Users\\Soheil\\Downloads\\Jarvis\\RevitCataloniaChecker\\RevitCataloniaChecker.csproj",
+        "projectPath": "c:\\Users\\Soheil\\Desktop\\ArchIQ_SourceCode\\RevitCataloniaChecker\\RevitCataloniaChecker.csproj",
         "packagesPath": "C:\\Users\\Soheil\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\Soheil\\Downloads\\Jarvis\\RevitCataloniaChecker\\obj\\",
+        "outputPath": "c:\\Users\\Soheil\\Desktop\\ArchIQ_SourceCode\\RevitCataloniaChecker\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Soheil\\AppData\\Roaming\\NuGet\\NuGet.Config"
