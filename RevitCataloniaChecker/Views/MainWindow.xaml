@@ -81,6 +81,7 @@
             <RowDefinition Height="Auto"/> <!-- Tools & Filters -->
             <RowDefinition Height="*"/>    <!-- DataGrid -->
             <RowDefinition Height="180"/>  <!-- AI Insights -->
+            <RowDefinition Height="Auto"/> <!-- Settings -->
             <RowDefinition Height="Auto"/> <!-- Footer -->
         </Grid.RowDefinitions>
 
@@ -215,8 +216,24 @@
             </Grid>
         </Border>
 
+                <!-- 4.5 Settings -->
+        <Border Grid.Row="4" Background="#1E1E2E" CornerRadius="8" Padding="15" Margin="0,0,0,15">
+            <Expander Header="⚙ Settings (API Key)" Foreground="#A6ADC8" ExpandDirection="Down">
+                <Grid Margin="0,10,0,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Gemini API Key:" Foreground="#CDD6F4" VerticalAlignment="Center" Margin="0,0,10,0"/>
+                    <TextBox x:Name="TxtApiKey" Grid.Column="1" Height="25" Background="#313244" Foreground="#CDD6F4" BorderThickness="0" Padding="5"/>
+                    <Button Grid.Column="2" Content="Save" Width="60" Margin="10,0,0,0" Background="#A6E3A1" Foreground="#11111B" Click="OnSaveApiKeyClicked"/>
+                </Grid>
+            </Expander>
+        </Border>
+
         <!-- 5. Footer Actions -->
-        <Grid Grid.Row="4">
+        <Grid Grid.Row="5">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
@@ -232,5 +249,7 @@
         </Grid>
     </Grid>
 </Window>
+
+
 
 

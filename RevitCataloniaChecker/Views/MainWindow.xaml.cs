@@ -42,6 +42,7 @@ namespace RevitCataloniaChecker.Views
             _engine = new ComplianceEngine();
             _aiService = new GeminiAiService();
 
+            TxtApiKey.Text = _aiService.GetApiKey();
             ChatList.ItemsSource = ChatMessages;
         }
 
@@ -175,7 +176,14 @@ namespace RevitCataloniaChecker.Views
             ScrollChatToBottom();
         }
 
-                private void OnUploadCsvClicked(object sender, RoutedEventArgs e)
+        
+        private void OnSaveApiKeyClicked(object sender, RoutedEventArgs e)
+        {
+            _aiService.SetApiKey(TxtApiKey.Text.Trim());
+            System.Windows.MessageBox.Show("API Key saved successfully!");
+        }
+
+        private void OnUploadCsvClicked(object sender, RoutedEventArgs e)
         {
             var dialog = new Microsoft.Win32.OpenFileDialog
             {

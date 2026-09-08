@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Net.Http;
@@ -46,6 +46,21 @@ namespace RevitCataloniaChecker.Services
         }
 
         public bool HasApiKey => !string.IsNullOrWhiteSpace(_apiKey);
+
+        public string GetApiKey() => _apiKey ?? string.Empty;
+
+        public void SetApiKey(string key)
+        {
+            _apiKey = key;
+            try
+            {
+                string configPath = System.IO.Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "ArchIQ", "config.json");
+                System.IO.Directory.CreateDirectory(System.IO.Path.GetDirectoryName(configPath));
+                string json = "{\"gemini_api_key\":\"" + key + "\"}";
+                System.IO.File.WriteAllText(configPath, json);
+            }
+            catch { }
+        }
 
         public void InitializeProjectContext(string projectName, string country, string province, List<RoomData> rooms, List<ComplianceItem> nonCompliantItems, List<BomData> bom)
         {
