@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "vx9qToizK3E=",
+  "success": true,
+  "projectFilePath": "c:\\Users\\Soheil\\Downloads\\Jarvis\\ArchIQ_Installer\\ArchIQ_Installer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Soheil\\.nuget\\packages\\microsoft.net.illink.tasks\\8.0.30\\microsoft.net.illink.tasks.8.0.30.nupkg.sha512"
+  ],
+  "logs": []
+}

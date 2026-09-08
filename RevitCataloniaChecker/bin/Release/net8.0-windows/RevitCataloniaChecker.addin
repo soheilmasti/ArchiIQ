@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>Catalonia Building Code Checker</Name>
+    <Assembly>c:\Users\Soheil\Downloads\Jarvis\RevitCataloniaChecker\bin\Debug\net8.0-windows\RevitCataloniaChecker.dll</Assembly>
+    <FullClassName>RevitCataloniaChecker.App</FullClassName>
+    <ClientId>A8B92305-6481-4B9F-8408-2A18D37E6F31</ClientId>
+    <VendorId>CATALONIA_BIM_AI</VendorId>
+    <VendorDescription>AI-Powered Building Regulation Checker for Spain &amp; Catalonia</VendorDescription>
+  </AddIn>
+</RevitAddIns>

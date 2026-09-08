@@ -1,0 +1,15 @@
+C:\Users\Soheil\Downloads\Jarvis\ArchIQ_Installer\obj\Release\net8.0-windows\win-x64\ArchIQ_Installer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Soheil\Downloads\Jarvis\ArchIQ_Installer\obj\Release\net8.0-windows\win-x64\ArchIQ_Installer.AssemblyInfoInputs.cache
+C:\Users\Soheil\Downloads\Jarvis\ArchIQ_Installer\obj\Release\net8.0-windows\win-x64\ArchIQ_Installer.AssemblyInfo.cs
+C:\Users\Soheil\Downloads\Jarvis\ArchIQ_Installer\obj\Release\net8.0-windows\win-x64\ArchIQ_Installer.csproj.CoreCompileInputs.cache
+C:\Users\Soheil\Downloads\Jarvis\ArchIQ_Installer\obj\Release\net8.0-windows\win-x64\ArchIQ_Installer.sourcelink.json
+C:\Users\Soheil\Downloads\Jarvis\ArchIQ_Installer\obj\Release\net8.0-windows\win-x64\ArchIQ_Installer.genruntimeconfig.cache
+c:\Users\Soheil\Downloads\Jarvis\ArchIQ_Installer\bin\Release\net8.0-windows\win-x64\ArchIQ_Setup_2026.exe
+c:\Users\Soheil\Downloads\Jarvis\ArchIQ_Installer\bin\Release\net8.0-windows\win-x64\ArchIQ_Setup_2026.deps.json
+c:\Users\Soheil\Downloads\Jarvis\ArchIQ_Installer\bin\Release\net8.0-windows\win-x64\ArchIQ_Setup_2026.runtimeconfig.json
+c:\Users\Soheil\Downloads\Jarvis\ArchIQ_Installer\bin\Release\net8.0-windows\win-x64\ArchIQ_Setup_2026.dll
+c:\Users\Soheil\Downloads\Jarvis\ArchIQ_Installer\bin\Release\net8.0-windows\win-x64\ArchIQ_Setup_2026.pdb
+c:\Users\Soheil\Downloads\Jarvis\ArchIQ_Installer\obj\Release\net8.0-windows\win-x64\ArchIQ_Setup_2026.dll
+c:\Users\Soheil\Downloads\Jarvis\ArchIQ_Installer\obj\Release\net8.0-windows\win-x64\refint\ArchIQ_Setup_2026.dll
+c:\Users\Soheil\Downloads\Jarvis\ArchIQ_Installer\obj\Release\net8.0-windows\win-x64\ArchIQ_Setup_2026.pdb
+c:\Users\Soheil\Downloads\Jarvis\ArchIQ_Installer\obj\Release\net8.0-windows\win-x64\ref\ArchIQ_Setup_2026.dll

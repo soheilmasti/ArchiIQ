@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<RevitAddIns>
+  <AddIn Type="Application">
+    <Name>ArchIQ_2026</Name>
+    <Assembly>ArchIQ_2026.dll</Assembly>
+    <AddInId>3690E4C0-1CD5-45D8-85F6-A28CA73E7C56</AddInId>
+    <FullClassName>RevitCataloniaChecker.App</FullClassName>
+    <VendorId>ArchIQ</VendorId>
+    <VendorDescription>AI Architectural Code Checker (2026)</VendorDescription>
+  </AddIn>
+</RevitAddIns>

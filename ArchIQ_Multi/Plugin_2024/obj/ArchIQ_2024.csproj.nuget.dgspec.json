@@ -1,0 +1,75 @@
+{
+  "format": 1,
+  "restore": {
+    "c:\\Users\\Soheil\\Downloads\\Jarvis\\ArchIQ_Multi\\Plugin_2024\\ArchIQ_2024.csproj": {}
+  },
+  "projects": {
+    "c:\\Users\\Soheil\\Downloads\\Jarvis\\ArchIQ_Multi\\Plugin_2024\\ArchIQ_2024.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\Soheil\\Downloads\\Jarvis\\ArchIQ_Multi\\Plugin_2024\\ArchIQ_2024.csproj",
+        "projectName": "ArchIQ_2024",
+        "projectPath": "c:\\Users\\Soheil\\Downloads\\Jarvis\\ArchIQ_Multi\\Plugin_2024\\ArchIQ_2024.csproj",
+        "packagesPath": "C:\\Users\\Soheil\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\Soheil\\Downloads\\Jarvis\\ArchIQ_Multi\\Plugin_2024\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Soheil\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "targetAlias": "net48",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "targetAlias": "net48",
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )",
+              "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
+            },
+            "Revit_All_Main_Versions_API_x64": {
+              "include": "Compile, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[2024.0.0, )"
+            },
+            "System.Net.Http": {
+              "target": "Package",
+              "version": "[4.3.4, )"
+            },
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Users\\Soheil\\.dotnet\\sdk\\8.0.424\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
